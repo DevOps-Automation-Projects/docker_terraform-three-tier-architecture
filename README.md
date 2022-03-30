@@ -1,11 +1,41 @@
-# ⇥ Docker Three Tier Architecture
+# ⇥ Docker & Terraform Three Tier Architecture
 
-### 𝐴 𝑑𝑒𝑚𝑜𝑛𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛 𝑜𝑓 𝑑𝑜𝑐𝑘𝑒𝑟 𝑡𝑜 𝑖𝑚𝑝𝑙𝑒𝑚𝑒𝑛𝑡 𝑎 𝑠𝑖𝑚𝑝𝑙𝑒 3 𝑡𝑖𝑒𝑟 𝑎𝑟𝑐ℎ𝑖𝑡𝑒𝑐𝑡𝑢𝑟𝑒 
+### 𝐴 𝑑𝑒𝑚𝑜𝑛𝑠𝑡𝑟𝑎𝑡𝑖𝑜𝑛 𝑜𝑓 𝑑𝑜𝑐𝑘𝑒𝑟 𝑎𝑛𝑑 𝑡𝑒𝑟𝑟𝑎𝑓𝑜𝑟𝑚 𝑡𝑜 𝑖𝑚𝑝𝑙𝑒𝑚𝑒𝑛𝑡 𝑎 𝑠𝑖𝑚𝑝𝑙𝑒 3 𝑡𝑖𝑒𝑟 𝑎𝑟𝑐ℎ𝑖𝑡𝑒𝑐𝑡𝑢𝑟𝑒 
+
+##  ⇥ Terraform Setup Info
+
+![terraformlogo](https://github.com/harshhaareddy/docker_terraform-three-tier-architecture/blob/master/terraformlogo.png)
+
+```
+      ------------------------------------------
+      |  Terraform will create below resources |
+      ------------------------------------------
+
+      > VPC
+      > Application Load Balancer
+      > Public & Private Subnets
+      > EC2 instances
+      > RDS instance
+      > Route Table
+      > Internet Gateway
+      > Security Groups for Web & RDS instances
+      > Route Table
+
+      ---------------------------------
+      | Instructions to apply changes |
+      ---------------------------------
+
+      > terraform init is to initialize the working directory and downloading plugins of the provider
+      > terraform plan is to create the execution plan for our code
+      > terraform apply is to create the actual infrastructure. It will ask you to provide the Access Key and Secret Key in order to create the infrastructure. So, instead of hardcoding the Access Key and Secret Key, it is better to apply at the run time
+
+```
+
 
 ##  ⇥ Task Info
 
 ```
-I am going to talk about how to do a classic 3-tier architecture using docker containers. 
+I am going to talk about how to do a classic 3-tier architecture using docker containers and setup infrastructure using terraform
     The 3-tiers will be:
 
  → Frontend tier: This will host the web application.
